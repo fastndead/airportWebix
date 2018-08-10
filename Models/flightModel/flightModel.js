@@ -10,6 +10,11 @@ function flightModel(destination1, destination2, pilot, plane){
 	this.pilot = pilot;
 	this.plane = plane;
 
+	this.getJSON = function(){
+		return {"destination1": destination1, "destination2": destination2,
+				"pilot": pilot.getFullName(), "plane": plane.getName()};
+	}
+
 	this.getPilotFullName = function(){
 		return pilot.getFullName();
 	}
